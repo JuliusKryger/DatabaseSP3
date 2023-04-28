@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from services import test_service
+from services import db_service
 from models import dtos
 
 app = FastAPI()
@@ -22,4 +22,4 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return test_service.get_data()
+    return db_service.get_books()
