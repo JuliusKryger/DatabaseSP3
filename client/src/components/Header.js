@@ -5,9 +5,9 @@ const Header = () => {
     return (
         <div>
             <nav>
-                <ul className='navbar'>
-                    <li><NavLink to='/'>One</NavLink></li>
-                    <li><NavLink to='/two'>Two</NavLink></li>
+                <ul className='header'>
+                    <li><NavLink to='/'>Get Students</NavLink></li>
+                    <li><NavLink to='/two'>Create Student</NavLink></li>
                 </ul>
             </nav>
         </div >

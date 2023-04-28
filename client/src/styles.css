@@ -12,11 +12,11 @@ code {
     monospace;
 }
 
-.navbar a.active {
+.header a.active {
   background-color: #4CAF50;
 }
 
-ul.navbar {
+ul.header {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -24,11 +24,11 @@ ul.navbar {
   background-color: #26292c;
 }
 
-ul.navbar li {
+ul.header li {
   float: left;
 }
 
-ul.navbar li a {
+ul.header li a {
   display: block;
   color: white;
   text-align: center;
@@ -36,10 +36,19 @@ ul.navbar li a {
   text-decoration: none;
 }
 
-ul.navbar li a:hover:not(.active) {
+ul.header li a:hover:not(.active) {
   background-color: #0b0b0b;
 }
 
 .center {
   text-align: center;
+}
+
+.students {
+  list-style: none;
+}
+
+.form-input {
+  width: 50% !important;
+  margin: 0 auto;
 }

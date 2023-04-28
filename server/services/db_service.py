@@ -1,7 +1,7 @@
 from pymongo.mongo_client import MongoClient
 
 def get_database():
-   url = 'mongodb://localhost:27019/'
+   url = 'mongodb://localhost:27017/'
 
    # Create a new client and connect to the server
    client = MongoClient(url)
@@ -34,3 +34,11 @@ def get_top_10_students():
       students.append(student)
 
    return students
+
+def create_student(student):
+   db = get_database()
+   collection = db["students"]
+
+   result = collection.insert_one(student)
+
+   return result

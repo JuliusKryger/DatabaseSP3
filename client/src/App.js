@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
-import One from './views/One';
-import Two from './views/Two';
+import GetStudent from './views/GetStudent';
+import CreateStudent from './views/CreateStudent';
 
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<One />} />
-        <Route path="/two" element={<Two />} />
+        <Route path="/" element={<GetStudent />} />
+        <Route path="/two" element={<CreateStudent />} />
       </Routes>
     </BrowserRouter>
   );

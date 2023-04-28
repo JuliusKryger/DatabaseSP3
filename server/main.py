@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.encoders import jsonable_encoder
 
 from services import db_service
 from models import dtos
@@ -28,3 +29,8 @@ def read_root():
 @app.get("/top")
 def get_top_10_students():
     return db_service.get_top_10_students()
+
+@app.post("/create")
+def create_student(studentDTO: dtos.StudentDTO):
+    student = jsonable_encoder(studentDTO)
+    db_service.create_student(student)

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = '<API url goes here>';
+const URL = 'http://127.0.0.1:8000';
 
 const api = () => {
 

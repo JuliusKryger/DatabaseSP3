@@ -1,4 +1,5 @@
 from pydantic import BaseModel
 
-class testDTO(BaseModel):
+class StudentDTO(BaseModel):
     name: str
+    scores: list
