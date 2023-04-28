@@ -28,7 +28,7 @@ def read_root():
 
 @app.get("/top")
 def get_top_10_students():
-    return db_service.get_top_10_students()
+    return db_service.get_top_10_students_aggregate()
 
 @app.post("/create")
 def create_student(studentDTO: dtos.StudentDTO):

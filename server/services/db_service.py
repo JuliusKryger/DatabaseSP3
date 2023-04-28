@@ -35,6 +35,23 @@ def get_top_10_students():
 
    return students
 
+def get_top_10_students_aggregate():
+   db = get_database()
+   collection = db["students"]
+   pipeline = [
+    { "$project": { "name": 1, "examScore": { "$arrayElemAt": ["$scores.score", 0] } } },
+    { "$sort": { "examScore": -1 } },
+    { "$limit": 10 }]
+
+   result = collection.aggregate(pipeline)
+
+   students = []
+   for s in result:
+      student = {"name": s["name"], "score": s["examScore"]}
+      students.append(student)
+
+   return students
+
 def create_student(student):
    db = get_database()
    collection = db["students"]
