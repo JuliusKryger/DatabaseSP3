@@ -22,4 +22,9 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return db_service.get_books()
+    return db_service.get_students()
+
+
+@app.get("/top")
+def get_top_10_students():
+    return db_service.get_top_10_students()
